@@ -2,9 +2,39 @@ html, body {
   color: white !important;
   margin: 0;
   padding: 0;
-  /* background-color: black !important; */
+   
 }
 canvas {
   display: block;
   position: fixed !important;
+}
+
+#nivel{
+	background-color:white;
+	color: black;
+}
+
+#nivel p {
+	font-size: 40px;
+	margin: 20px;
+	margin-left: 50px;
+
+}
+
+#titulo{
+	font-size: 80px;
+	margin-left: 50px;
+}
+#descripcion {
+	margin-left: 50px;
+}
+
+.col-8{
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    margin-left: 50px;
+    line-height: 1.5em;
+}
+.info{
+	line-height: 60px;
 }
