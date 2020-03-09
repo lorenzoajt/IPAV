@@ -4,9 +4,11 @@ var vehicles = [];
 
 function preload() {
     font = loadFont('Hi_Melody/HiMelody-Regular.ttf');
+    console.log("loading");
 }
 
 function setup() {
+  console.log("loaded");
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
   canvas.style('z-index', -1);
