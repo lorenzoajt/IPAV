@@ -41,12 +41,15 @@ function draw() {
 
 let systems;
 var canvas;
+var numParticles = 0;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
   canvas.style('z-index', -1);
   systems = [];
+  this.p = new ParticleSystem(createVector(windowWidth/2, windowHeight/2));
+  systems.push(p);
 }
 
 function draw() {
@@ -54,20 +57,19 @@ function draw() {
   background(0);
   for (i = 0; i < systems.length; i++) {
     systems[i].run();
-    systems[i].addParticle();
+    if(numParticles < 200){
+      systems[i].addParticle();
+      numParticles++;
+    }
+    
   }
-  // if (systems.length == 0) {
-  //   fill(255);
-  //   textAlign(CENTER);
-  //   textSize(32);
-  //   text("click mouse to add particle systems", width / 2, height / 2);
-  // }
+  
 }
 
-function mousePressed() {
-  this.p = new ParticleSystem(createVector(mouseX, mouseY));
-  systems.push(p);
-}
+// function mousePressed() {
+//   this.p = new ParticleSystem(createVector(mouseX, mouseY));
+//   systems.push(p);
+// }
 
 // A simple Particle class
 let Particle = function(position) {
@@ -182,8 +184,8 @@ CrazyParticle.prototype.display=function() {
   push();
   translate(this.position.x, this.position.y);
   rotate(this.theta);
-  stroke(124,143,172);
-  line(0, 0, 25, 0);
+  stroke(124,143,172,150);
+  line(0, 0, 25, 50);
   pop();
 }
 
