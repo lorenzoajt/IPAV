@@ -6,4 +6,5 @@ html, body {
 }
 canvas {
   display: block;
+  position: fixed !important;
 }
