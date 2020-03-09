@@ -56,12 +56,12 @@ function draw() {
     systems[i].run();
     systems[i].addParticle();
   }
-  if (systems.length == 0) {
-    fill(255);
-    textAlign(CENTER);
-    textSize(32);
-    text("click mouse to add particle systems", width / 2, height / 2);
-  }
+  // if (systems.length == 0) {
+  //   fill(255);
+  //   textAlign(CENTER);
+  //   textSize(32);
+  //   text("click mouse to add particle systems", width / 2, height / 2);
+  // }
 }
 
 function mousePressed() {
