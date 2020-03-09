@@ -1,8 +1,9 @@
 html, body {
+  color: white !important;
   margin: 0;
   padding: 0;
-/*  background-color: black;
-*/}
+  /* background-color: black !important; */
+}
 canvas {
   display: block;
 }
