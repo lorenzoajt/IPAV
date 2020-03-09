@@ -38,3 +38,7 @@ canvas {
 .info{
 	line-height: 60px;
 }
+
+#mainRow{
+  margin: 0;
+}
