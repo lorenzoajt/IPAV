@@ -11,18 +11,18 @@ function preload(){
 
 function setup() {
   console.log("Cargado");
-  canvas = createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight + 243);
   canvas.position(0,0);
   canvas.style('z-index', -1);
   systems = [];
   this.p = new ParticleSystem(createVector(windowWidth/2, windowHeight/2));
   systems.push(p);
 
-  // $(document).ready(function(){
-  //   $('#nivel').animate({
-  //     width: "100%"
-  //   },1500);
-  // });
+  $(document).ready(function(){
+    $('#nivel').animate({
+      width: "100%"
+    },1500);
+  });
 
 }
 
@@ -39,6 +39,10 @@ function draw() {
   }
   
 }
+
+// function windowResized(){
+//   resizeCanvas(windowWidth,windowHeight);
+// }
 
 function mouseMoved(){
   currentMouseX = mouseX;
