@@ -4,8 +4,13 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Spartan', sans-serif !important;
-
+  /* background-color: black; */
 }
+
+body{
+	background-color: black;
+}
+
 canvas {
   display: block;
   position: fixed !important;
@@ -14,7 +19,7 @@ canvas {
 #nivel{
 	background-color: white;
 	color: black;
-	width: 100%;
+	width: 1%;
 	/* max-height: 60px; */
 	overflow: inherit;
 }
