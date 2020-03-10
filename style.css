@@ -91,3 +91,100 @@ canvas {
     width: 100%;
     text-align: center;
 }
+
+.destruidoXs{
+	width: 60%;
+	height: 100px;
+	background-image: url(img/destruido.png);
+	overflow: hidden;
+	background-size: 100%;
+	background-repeat: no-repeat;	
+	min-height: 200px;
+	margin: 0 auto;
+	display: none;
+}
+
+.lorenzoXs{
+	width: 60%;
+	height: 100px;
+	background-image: url(img/lorenzo.jpg);
+	overflow: hidden;
+	background-size: 100%;
+	background-repeat: no-repeat;	
+	min-height: 200px;
+	margin: 0 auto;
+	display: none;
+}
+
+.alexXs{
+	width: 60%;
+	height: 100px;
+	background-image: url(img/alexis.jpeg);
+	overflow: hidden;
+	background-size: 100%;
+	background-repeat: no-repeat;	
+	min-height: 200px;
+	margin: 0 auto;
+	display: none;
+}
+
+.bioXs{
+	text-align: center;
+	width: 80%;
+	display: none;
+}
+
+@media only screen and (max-width: 400px) {
+  #titulo{
+  	font-size: 25px;
+  }
+  #nivel p {
+	font-size: 20px;
+	margin-top: 50px;
+	margin-left: 40px;
+}
+.info {
+    line-height: 22px;
+    font-size: 15px;
+}
+.col-8{
+    margin-left: 36px;
+    width: 80%;
+}
+.descripcion {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.destruido{
+	display: none;
+}
+
+.lorenzo{
+	display: none;
+}
+
+.alex{
+	display: none;
+}
+
+.destruidoXs{
+	display: block;
+}
+
+.lorenzoXs{
+	display: block;
+}
+
+.alexXs{
+	display: block;
+}
+
+.bioXs{
+	display: block;
+}
+.bio{
+	display: none;
+}
+
+}
