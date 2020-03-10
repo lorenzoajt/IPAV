@@ -98,7 +98,18 @@ Particle.prototype.update = function(){
   this.velocity.add(this.acceleration);
   this.position.add(this.velocity);
   // this.lifespan -= 2;
-
+  if(this.position.x < 8){
+    this.velocity.x *= -1;
+  }
+  if(this.position.x > windowWidth - 8){
+    this.velocity.x *= -1;
+  }
+  if(this.position.y < 8){
+    this.velocity.y *= -1;
+  }
+  if(this.position.y > windowHeight - 8){
+    this.velocity.y *= -1;
+  }
 };
 
 // Method to display
@@ -112,8 +123,7 @@ Particle.prototype.display = function () {
 // Is the particle still useful?
 Particle.prototype.isDead = function () {
   if (this.position.x <= 0 || this.position.x >= windowWidth || this.position.y <= 0 || this.position.y >= windowHeight) {
-    return true;
-
+    //return true;
   } else {
     return false;
   }
