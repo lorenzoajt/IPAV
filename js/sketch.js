@@ -11,7 +11,7 @@ function preload(){
 
 function setup() {
   console.log("Cargado");
-  canvas = createCanvas(windowWidth, windowHeight + 243);
+  canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
   canvas.style('z-index', -1);
   systems = [];
