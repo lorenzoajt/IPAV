@@ -17,6 +17,13 @@ function setup() {
   systems = [];
   this.p = new ParticleSystem(createVector(windowWidth/2, windowHeight/2));
   systems.push(p);
+
+  // $(document).ready(function(){
+  //   $('#nivel').animate({
+  //     width: "100%"
+  //   },1500);
+  // });
+
 }
 
 function draw() {
