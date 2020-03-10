@@ -1,49 +1,16 @@
-/*var canvas;
-var font;
-var vehicles = [];
-
-function preload() {
-    font = loadFont('Hi_Melody/HiMelody-Regular.ttf');
-    console.log("loading");
-}
-
-function setup() {
-  console.log("loaded");
-  canvas = createCanvas(windowWidth, windowHeight);
-  canvas.position(0,0);
-  canvas.style('z-index', -1);
-  background(0);
-
-  var points = font.textToPoints('Hola mundo', windowWidth/2-200, windowHeight/2, 200);
-
-  for (var i = 0; i < points.length; i++) {
-    var pt = points[i];
-    var vehicle = new Vehicle(pt.x, pt.y);
-    vehicles.push(vehicle);
-  }
-}
-
-
-function draw() {
-  background(0);
-  for (var i = 0; i < vehicles.length; i++) {
-    var v = vehicles[i];
-    v.behaviors();
-    v.update();
-    v.show();
-  }
-  // console.log(Vehicle.vel);
-
-
-}
-*/
 
 
 let systems;
 var canvas;
 var numParticles = 0;
+var currentMouseX, currentMouseY;
+
+function preload(){
+  console.log("Cargando");
+}
 
 function setup() {
+  console.log("Cargado");
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
   canvas.style('z-index', -1);
@@ -66,10 +33,10 @@ function draw() {
   
 }
 
-// function mousePressed() {
-//   this.p = new ParticleSystem(createVector(mouseX, mouseY));
-//   systems.push(p);
-// }
+function mouseMoved(){
+  currentMouseX = mouseX;
+  currentMouseY = mouseY;
+}
 
 // A simple Particle class
 let Particle = function(position) {
@@ -97,7 +64,8 @@ Particle.prototype.run = function() {
 Particle.prototype.update = function(){
   this.velocity.add(this.acceleration);
   this.position.add(this.velocity);
-  // this.lifespan -= 2;
+
+  //Check for bounce
   if(this.position.x < 8){
     this.velocity.x *= -1;
   }
@@ -110,6 +78,20 @@ Particle.prototype.update = function(){
   if(this.position.y > windowHeight - 8){
     this.velocity.y *= -1;
   }
+
+
+  //Check for mouse position
+  // if(this.position.x < currentMouseX + 20 && this.position.y < currentMouseY + 20){
+  //   if(this.position.x > currentMouseX -20 && this.position.y > currentMouseY -20){
+  //     var mouseVector = createVector(mouseX - this.position.x, mouseY - this.position.y);
+  //     this.acceleration = mouseVector;
+
+  //     if(this.position.x == currentMouseX && this.position.y == currentMouseY){
+  //       this.acceleration = createVector(0,0);
+  //     }
+  //   }
+  // }
+
 };
 
 // Method to display
