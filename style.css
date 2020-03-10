@@ -12,15 +12,19 @@ canvas {
 }
 
 #nivel{
-	background-color:white;
+	background-color: white;
 	color: black;
 }
 
 #nivel p {
 	font-size: 40px;
-	margin: 20px;
+	margin: 65px 0px 30px 0;
 	margin-left: 50px;
 
+}
+.descripcion{
+    font-size: 25px;
+    line-height: 32px;
 }
 
 #titulo{
@@ -38,18 +42,44 @@ canvas {
     line-height: 1.5em;
 }
 .info{
-	line-height: 60px;
+	line-height: 45px;
+	margin-bottom: 10px;
 }
 
 #mainRow{
   margin: 0;
 }
-
-.foto{
-	width:200px;
-	height:200px;"
+.row{
+	margin-right: 0px !important;
 }
 
-.col-4{
-    margin-left: 50px;
+.destruido{
+	background-image: url(img/destruido.png);
+	overflow: hidden;
+	background-size: 100%;
+	background-repeat: no-repeat;	
+}
+.lorenzo{
+	background-image: url(img/lorenzo.jpg);
+	overflow: hidden;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.alex{
+	background-image: url(img/alexis.jpeg);
+	overflow: hidden;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.instructor{
+	margin-bottom: 50px !important;
+	margin-left: 50px !important;
+	min-height: 240px;
+}
+
+.submit {
+    margin: 40px 0 40px 0;
+    width: 100%;
+    text-align: center;
 }
