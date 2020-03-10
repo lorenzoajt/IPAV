@@ -15,7 +15,7 @@ function preload(){
   particleY = windowHeight/2
   screenX = screen.width;
   screenY = screen.height;
-  if(screenX < 400){
+  if(screenX <= 412){
     particleX = screenX / 2;
     particleY = screenY / 2;
   }
