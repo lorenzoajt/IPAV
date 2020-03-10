@@ -6,11 +6,19 @@ var numParticles = 0;
 var currentMouseX, currentMouseY;
 var particleX = 0;
 var particleY = 0;
+var screenX = 0;
+var screenY = 0;
 
 function preload(){
   console.log("Cargando");
   particleX = windowWidth/2;
   particleY = windowHeight/2
+  screenX = screen.width;
+  screenY = screen.height;
+  if(screenX < 400){
+    particleX = screenX / 2;
+    particleY = screenY / 2;
+  }
 }
 
 function setup() {
