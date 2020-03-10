@@ -4,9 +4,13 @@ let systems;
 var canvas;
 var numParticles = 0;
 var currentMouseX, currentMouseY;
+var particleX = 0;
+var particleY = 0;
 
 function preload(){
   console.log("Cargando");
+  particleX = windowWidth/2;
+  particleY = windowHeight/2
 }
 
 function setup() {
@@ -15,7 +19,7 @@ function setup() {
   canvas.position(0,0);
   canvas.style('z-index', -1);
   systems = [];
-  this.p = new ParticleSystem(createVector(windowWidth/2, windowHeight/2));
+  this.p = new ParticleSystem(createVector(particleX, particleY));
   systems.push(p);
 
   $(document).ready(function(){
