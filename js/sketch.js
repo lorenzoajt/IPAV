@@ -11,6 +11,9 @@ var screenY = 0;
 
 function preload(){
   console.log("Cargando");
+
+  window.onload = detectarCarga();
+  
   particleX = windowWidth/2;
   particleY = windowHeight/2
   screenX = screen.width;
@@ -20,9 +23,12 @@ function preload(){
     particleY = screenY / 2;
   }
 
+
+
 }
 
 function setup() {
+  
   console.log("Cargado");
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
@@ -38,7 +44,7 @@ function setup() {
   });
 
   //
-  window.onload = detectarCarga();
+  //window.onload = detectarCarga();
 
 }
 
