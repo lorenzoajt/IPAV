@@ -19,6 +19,7 @@ function preload(){
     particleX = screenX / 2;
     particleY = screenY / 2;
   }
+
 }
 
 function setup() {
@@ -35,6 +36,9 @@ function setup() {
       width: "100%"
     },1500);
   });
+
+  //
+  window.onload = detectarCarga();
 
 }
 
@@ -202,6 +206,14 @@ CrazyParticle.prototype.display=function() {
   stroke(124,143,172,150);
   line(0, 0, 25, 50);
   pop();
+}
+
+// 
+
+function detectarCarga(){
+
+ $(".loader").fadeOut("slow"); 
+ console.log("Cargado2");
 }
 
 

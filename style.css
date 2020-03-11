@@ -188,3 +188,15 @@ canvas {
 }
 
 }
+
+/* */
+
+.loader {
+
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: url('img/source.gif') 50% 50% rgb(0,0,0); 
+	background-repeat: no-repeat;
+   
+}
